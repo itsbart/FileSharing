@@ -549,9 +549,6 @@ void sendIPLIST()
 
 /* 
  * MENU AND COMMAND HANDLING SYSTEM
- * CREDIT: previous project (OS_161 development) in CSE_421 taught by 
- * Geoffrey Challen. kern/startup/menu.c 
- * will be reffered in credit section as: OS161 menu interface
  */
 
 /* 
@@ -1131,7 +1128,6 @@ void cmd_CutAll()
 /* 
  * COMMAND TABLE
  * Maps command to appropiate function.
- * CREDIT: OS161 menu interface
  */
 
 static struct {
@@ -1162,7 +1158,6 @@ static struct {
  * 
  * @arg command from stdin
  * @return 0 success, errno fail
- * CREDIT: OS161 menu interface
  */
 
 
@@ -1208,9 +1203,6 @@ static int command_execute(char *command)
  * CONNECT TO GOOGLE server, use their dns look up the IP address of host
  * @arg void
  * @return 0 success, errno fail
- * CREDIT: method mentioned on the class blog
- * getsockname: 
- * http://stackoverflow.com/questions/20941027/getsockname-c-not-setting-value
  */
 
 int getHostInfo()
@@ -1279,7 +1271,6 @@ int getHostInfo()
  * Method for setting up MAIN connection for local socket
  * @arg void
  * @return 0 success, errno fail
- * CREDIT: BEEJ's tutorial page 28
  */
 
 int setupConnection()
@@ -1364,7 +1355,6 @@ int updateSelect(int operation, int socketfd, fd_set* fdset, int* fdmax)
  * Method for accepting incoming connection
  * @arg void
  * @return 0 success, errno fail
- * CREDIT: BEEJ's tutorial page 28
  */
 
 int acceptConnection()
@@ -1441,8 +1431,6 @@ int acceptConnection()
  * Method for receiving file chunks
  * @arg socket, file name, file size, number of chunks
  * @return 0 success, errno fail
- * CREDIT: 
- * http://stackoverflow.com/questions/8679547/send-large-files-over-socket-in-c 
  */
 
 int receiveFile(int socket, char * filename, char * file_len, char * chunks_num)
@@ -1647,9 +1635,6 @@ int handle_command(int socket)
  * 
  * @arg void
  * @return 0 success, errno fail
- * CREDIT: 
- * http://publib.boulder.ibm.com/infocenter/iseries/v5r3/index.jsp?topic=%2Frzab6%2Frzab6xnonblock.htm
- * BEEJ's tutorial (God Bless him for this tutorial)
  */
  
 int selector()
